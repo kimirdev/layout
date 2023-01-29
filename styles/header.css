@@ -1,0 +1,91 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #D9FFF5;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    background-color: #FFFFFF;
+}
+
+.header__part {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header__button,
+.header__divider,
+.header__button-menu {
+    margin: 0 10px;
+}
+
+.header__button {
+    border: none;
+    background-color: inherit;
+    padding: 0;
+}
+
+.header__button-call, 
+.header__button-chat, 
+.header__button-profile,
+.divider-1, .divider-2 {
+    display: none;
+}
+
+.header__divider {
+    width: 2px;
+    height: 32px;
+    margin: 0 20px;
+    background: #eaeaea;
+    border-radius: 1px;
+}
+
+
+/* @media screen and (max-width: 310px) {
+    .divider-2 {
+        display: none;
+    }
+    .divider-3 {
+        display: none;
+    }
+} */
+
+/* @media screen and (max-width: 320px) {
+    .divider-2 {
+        display: block;
+    }
+    .divider-3 {
+        display: none;
+    }
+} */
+
+@media screen and (min-width: 768px) {
+    
+    .header__button-call, 
+    .header__button-chat, 
+    .header__button-profile,
+    .divider-1, .divider-3 {
+        display:block;
+    }
+
+    .divider-2 {
+        display: none;
+    }
+
+    .header__button-menu {
+        margin: 0;
+        margin-left: 24px;
+    }
+
+    .header__button-status {
+        margin-right: 24px;
+    }
+}
+
+
+@media screen and (min-width: 1120px) {
+    .header {
+        display: none;
+    }
+}

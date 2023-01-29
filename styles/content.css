@@ -1,0 +1,157 @@
+.content {
+    font-family: 'TT Lakes';
+}
+
+.content__panel {
+    margin-top: 24px;
+    padding-left: 16px;
+    border-left: 4px solid #41F6D7;
+    border-top: 4px solid rgba(0,0,0,0);
+    border-bottom: 4px solid rgba(0,0,0,0);
+    display: flex;
+    justify-content: space-between;
+}
+
+.content__buttons {
+    display: none;
+}
+
+.content__button {
+    background-color: inherit;
+    border: none;
+    font-family: inherit;
+    color: #1B1C21;
+    font-size: 16px;
+}
+
+.content__title {
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.content__categories {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+    margin-left: 16px;
+    display: flex;
+    overflow-x: scroll;
+    white-space: nowrap;
+    /* height: 40px; */
+    text-align: center;
+    vertical-align: middle;
+}
+
+.content__categories::-webkit-scrollbar {
+    display: none;
+}
+
+.content__category {
+    font-weight: normal;
+    margin: auto 1px;
+    padding: 8px 22px;
+    color: #7E7E82;
+}
+
+.content__category_focused {
+    height: 100%;
+    background-color: #FFFFFF;
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.content__description {
+    width: 100%;
+    /* margin: 16px; */
+    margin: 0;
+}
+
+.content__text {
+    padding-left: 16px;
+}
+
+.content__paragraph {
+    font-size: 14px;
+    color:#1B1C21;
+}
+
+.content__paragraph_md,
+.content__paragraph_xl {
+    display: none;
+}
+
+.content__read-more {
+    margin: 16px;
+    margin-left: 0;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: rgba(0,0,0,0);
+}
+
+.content__text {
+    width: 100%;
+}
+.content__pic {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .content__description {
+        width: 94%;
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .content__text {
+        width: 50%;
+        margin: 0;
+    }
+    .content__panel {
+        padding-left: 24px;
+    }
+    .content__categories {
+        margin-left: 24px;
+    }
+    .content__pic {
+        width: 50%;
+        border-radius: 10px;
+    }
+    .content__paragraph_md {
+        margin-top: 20px;
+        display: block;
+    }
+}
+
+
+@media screen and (min-width: 1120px) {
+    .content__categories {
+        flex-wrap: wrap;
+        overflow-x: none;
+        margin-left: 34px;
+    }
+
+    .content__panel {
+        padding-left: 34px;
+    }
+    .content__buttons {
+        display: flex;
+    }
+
+    .content__button {
+        margin: 0 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .content_button p, .content__button img {
+        margin: 0 10px;
+    }
+
+    .content__paragraph_xl {
+        display: inline;
+    }
+}
