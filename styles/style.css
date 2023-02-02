@@ -1,9 +1,11 @@
 @import './header.css';
 @import './content.css';
+@import './sidebar.css';
 @import '../TTLakes/stylesheet.css';
 
 body {
     background-color: #F8F8F8;
+    font-family: 'TT Lakes';
 }
 
 html {

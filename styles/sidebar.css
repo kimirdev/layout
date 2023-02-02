@@ -1,0 +1,142 @@
+.sidebar {
+    position: fixed;
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 320px;
+    background-color: white;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 
+                16px 0px 52px rgba(14, 24, 80, 0.2);
+}
+
+.lorem-full-height {
+    height: 100vh;
+    margin-left: 500px;
+}
+
+.sidebar__header {
+    height: 88px;
+    display: flex;
+    box-sizing: border-box;
+    margin: 0;
+    justify-content: space-between;
+}
+
+.sidebar__block {
+    padding: 24px 16px;
+    display: flex;
+    padding-left: 0px;
+    margin-left: 8px;
+}
+
+
+.sidebar__button {
+    margin: 0;
+    border-radius: 20px;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border: 0px;
+    vertical-align: text-top;
+    outline: none;
+    background-color: #FF3E79;
+}
+
+.sidebar__logo {
+    margin-left: 16px;
+    align-self: center;
+}
+
+.sidebar__content {
+    background-color: #F8F8F8;
+    padding-top: 24px;
+    background-color: inherit;
+    padding-top: 24px;
+}
+
+.sidebar__list {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar__item {
+    margin-bottom: 25px;
+    height: 32px;
+}
+
+.sidebar__link:hover {
+    border-left: 4px solid #41F6D7;
+    color: #7E7E82;
+    cursor: pointer;
+}
+
+.sidebar__link {
+    text-decoration: none;
+
+    padding-left: 20px;
+    display: block;
+    height: 32px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    border-left: 4px solid #FFFFFF;
+    color: #1B1C21;
+    font-weight: 500;
+}
+
+.sidebar__footer {
+    position: absolute;
+    bottom: 32px;
+}
+
+.sidebar__footer-block {
+    margin-left: 8px;
+    width: 312px;
+}
+
+.sidebar__button {
+    margin-left: 16px;
+    margin-bottom: 16px;
+    margin-right: 0;
+}
+
+.sidebar__email {
+    margin-left: 16px;
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.sidebar__number {
+    margin-left: 16px;
+    display: block;
+    margin-bottom: 40px;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.sidebar__lang {
+    padding-left: 7px;
+    font-weight: 500;
+    bottom: 0px;
+}
+
+.sidebar__lang:first-child {
+    padding-left: 16px;
+}
+
+.sidebar__lang:hover {
+    color: #7E7E82;
+    cursor: pointer;
+}
+
+.sidebar__button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
