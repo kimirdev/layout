@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link
+        rel="stylesheet"
+        href="./styles/slider.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <section class="brands">
+        <div class="brands__title title">
+            <h2 class="title__text">Ремонт техники различных брендов</h2>
+        </div>
+        <div class="brands_container">
+            <div class="swiper-container swiper-collapsed" id="swiper-container">
+                <div class="brands__cards cards swiper-wrapper">
+                    <div class="cards__item card">
+                        <img src="imgs/brands/lenovo.svg" alt="" class="card__img" />
+                        <button class="card__button button" type="button"></button>
+                    </div>
+                    <div class="cards__item card">
+                        <img src="imgs/brands/samsung.svg" alt="" class="card__img" />
+                        <button class="card__button button" type="button"></button>
+                    </div>
+                    <div class="cards__item card">
+                        <img src="imgs/brands/apple.svg" alt="" class="card__img" />
+                        <button class="card__button button" type="button"></button>
+                    </div>
+                    <div class="cards__item card">
+                        <img src="imgs/brands/viewsonic.svg" alt="" class="card__img" />
+                        <button class="card__button button" type="button"></button>
+                    </div>
+                    <div class="cards__item card">
+                        <img src="imgs/brands/bosch.svg" alt="" class="card__img" />
+                        <button class="card__button button" type="button"></button>
+                    </div>
+                    <div class="cards__item card">
+                        <img src="imgs/brands/hp.svg" alt="" class="card__img" />
+                        <button class="card__button button" type="button"></button>
+                    </div>
+                    <div class="cards__item card">
+                        <img src="imgs/brands/acer.svg" alt="" class="card__img" />
+                        <button class="card__button button" type="button"></button>
+                    </div>
+                    <div class="cards__item card">
+                        <img src="imgs/brands/sony.svg" alt="" class="card__img" />
+                        <button class="card__button button" type="button"></button>
+                    </div>
+                    <div class="cards__item card">
+                        <img src="imgs/brands/lenovo.svg" alt="" class="card__img" />
+                        <button class="card__button button" type="button"></button>
+                    </div>
+                    <div class="cards__item card">
+                        <img src="imgs/brands/samsung.svg" alt="" class="card__img" />
+                        <button class="card__button button" type="button"></button>
+                    </div>
+                    <div class="cards__item card">
+                        <img src="imgs/brands/apple.svg" alt="" class="card__img" />
+                        <button class="card__button button" type="button"></button>
+                    </div>
+                </div>
+                <span class="fade"></span>
+                <div class="swiper-pagination"></div>
+            </div>
+            <button
+                class="brands__show-more show-more"
+                id="show-more"
+                type="button"
+            >
+                Показать всe
+            </button>
+        </div>
+      </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const breakpoint = window.matchMedia('(min-width:768px)');
+        let mySwiper;
+        const breakpointChecker = function () {
+            if (breakpoint.matches === true && mySwiper !== undefined) {
+                mySwiper.destroy(true, true);
+            } else if (breakpoint.matches === false) {
+                mySwiper = new Swiper('.swiper-container', {
+                    slideClass: 'card',
+                    loop: true,
+                    slidesPerView: 'auto',
+                    centeredSlides: false,
+                    a11y: true,
+                    keyboardControl: true,
+                    grabCursor: true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                });
+            }
+        };
+        breakpoint.addEventListener('change', () => {
+            breakpointChecker();
+        });
+        breakpointChecker();
+
+        const showMoreButton = document.getElementById('show-more');
+        const listExpanded = document.getElementById('swiper-container');
+        let expanded = false;
+
+        showMoreButton.addEventListener('click', function() {
+            showMoreButton.classList.toggle('show-more--active');
+            listExpanded.classList.toggle('swiper-expanded');
+            expanded = !expanded
+            showMoreButton.textContent = expanded ? 'Скрыть' : 'Показать все';
+        })
+    </script>
+</body>
+</html>
